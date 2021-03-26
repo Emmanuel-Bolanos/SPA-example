@@ -1,22 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const handleIncrease = () => setCount(count + 1);
+  const handleDecrease = () => setCount(count - 1);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src="https://picsum.photos/id/1/300/300" title="Lorem Picsum" alt="Lorem Picsum" />
+        <p> Hello, my name is Emmanuel! </p>
+        <p>{count}</p>
+        <button onClick={handleIncrease}> + </button>
+        <button onClick={handleDecrease}> - </button>
       </header>
     </div>
   );
