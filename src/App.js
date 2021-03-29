@@ -14,6 +14,7 @@ function App() {
         <p>{count}</p>
         <button onClick={handleIncrease}> + </button>
         <button onClick={handleDecrease}> - </button>
+        <p> Testing CI/CD Pipeline </p>
       </header>
     </div>
   );
